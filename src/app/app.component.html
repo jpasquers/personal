@@ -1,3 +1,14 @@
-<h1>
-  {{title}}
-</h1>
+<!-- intentionally not using the bootstrap classes ;) -->
+<nav class="mynav">
+    <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/track">Track</a></li>
+        <li><a href="/music">Music</a></li>
+        <li><a href="/gaming">Gaming</a></li>
+        <li><a href="/feedback">Feedback</a></li>
+    </ul>
+</nav>
+<!--This class is necessary because angular is generating different content 
+and we need to leave space for the fixed header on each page -->
+<div class="holder"></div>
+<router-outlet></router-outlet>

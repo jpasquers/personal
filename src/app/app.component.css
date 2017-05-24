@@ -1,0 +1,37 @@
+.mynav {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background: black;
+    width: 100%;
+}
+
+.holder {
+    height: 50px;
+}
+
+.mynav ul {
+    list-style-type: none;
+    margin: none;
+    padding: none;
+}
+
+.mynav li {
+    float: left;
+    color: white;
+}
+
+.mynav li a {
+    padding: 15px 20px;
+    color: white;
+    display: block;
+}
+
+.mynav li:hover {
+    cursor: pointer;
+}
+
+.mynav li:hover a {
+    color: rgb(90,150,220);
+    text-decoration: none;
+}
