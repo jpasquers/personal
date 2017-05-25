@@ -57,9 +57,10 @@
 
 .start .start-blurb {
     position: absolute;
-    top: 450px;
+    top: 57%;
     left: 28%;
     font-size: 17px;
+    min-width: 150px;
     max-width: 34%;
     color: white;
     background: transparent;
