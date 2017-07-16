@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Point static path to dist
 app.use(express.static(path.join(__dirname, '../dist')));
 
-app.get('/mostRecentGame/Dota', dotaApi.mostRecentDotaGame);
+app.get('/mostRecentGame/Dota', dotaAPI.mostRecentDotaGame);
 
 app.get('/recentGames/Dota', dotaAPI.recentDotaGames);
 
