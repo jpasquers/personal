@@ -48,7 +48,7 @@ supplementMatchStats = (match, sucFn) => {
         var heroName = selectedHero.localized_name;
 
         match.heroName = heroName;
-        sucFn(heroName);
+        sucFn(match);
 
     });
 }
