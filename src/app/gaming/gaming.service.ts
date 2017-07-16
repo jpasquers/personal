@@ -15,8 +15,8 @@ export class GamingService {
 
     }
 
-    getDotaHistory(): Observable<any> {
-        return this.http.get("/gameHistory/Dota")
+    getMostRecentDotaGame(): Observable<any> {
+        return this.http.get("/mostRecentGame/Dota")
             .map((res:Response) => res.json());
     }
 }

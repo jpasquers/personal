@@ -8,15 +8,15 @@ import { DotaGame } from './dota-game';
   styleUrls: ['./gaming.component.css']
 })
 export class GamingComponent implements OnInit {
-  previousGames: any[];
+  mostRecentGame: any;
 
   constructor(private gamingService: GamingService) { 
-    this.previousGames = [];
+    this.mostRecentGame = {};
   }
 
   ngOnInit() {
-    this.gamingService.getDotaHistory().subscribe((resp) =>{
-      this.previousGames = resp.result.matches;
+    this.gamingService.getMostRecentDotaGame().subscribe((resp) =>{
+      this.mostRecentGame = resp;
     },(error) => {
 
     })
