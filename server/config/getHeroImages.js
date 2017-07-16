@@ -4,7 +4,19 @@ var http = require('http')
   , fs = require('fs')
 
 var imgUrl = "http://cdn.dota2.com/apps/dota2/images/heroes/"
-var heroList = JSON.parse("../static/heroList.json");
+
+fs.readFile("../static/heroList.json", 'utf8', (err,data) => {
+    var heroList = JSON.parse(data);
+
+    for (var i=0; i< heroList.length; i++) {
+        var hero = heroList[i];
+        var heroName = hero.name.replace('npc_dota_hero','');
+        var suff = "sb.png"
+        queryString = heroName + "_" + suff;
+        buildRequest(heroName, suffix, queryString);
+    }
+});
+
 
 
 buildRequest = (heroName, suffix, queryString) => {
@@ -27,10 +39,3 @@ buildRequest = (heroName, suffix, queryString) => {
 }
 
 
-for (var i=0; i< heroList.length; i++) {
-    var hero = heroList[i];
-    var heroName = hero.name.replace('npc_dota_hero','');
-    var suff = "sb.png"
-    queryString = heroName + "_" + suff;
-    buildRequest(heroName, suffix, queryString);
-}
