@@ -41,7 +41,7 @@ supplementMatchStats = (match, sucFn) => {
         console.log(err);
         var heroList = JSON.parse(data);
 
-        var heroName = data.map((hero) => {
+        var heroName = heroList.map((hero) => {
             if (hero.id == match.hero_id) {
                 return hero.localized_name;
             }
