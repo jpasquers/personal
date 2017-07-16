@@ -15,8 +15,8 @@ export class GamingComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.gamingService.getDotaHistory().subscribe((games) =>{
-      this.previousGames = games;
+    this.gamingService.getDotaHistory().subscribe((resp) =>{
+      this.previousGames = resp.result.matches;
     },(error) => {
 
     })

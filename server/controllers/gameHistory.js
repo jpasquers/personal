@@ -13,7 +13,7 @@ module.exports = {
             }
         }, function(err, response, body) {
             var jsonResponse = JSON.parse(body);
-            res.send(body);
+            res.send(jsonResponse);
         })
     }
 }
