@@ -13,7 +13,7 @@ fs.readFile("../static/heroList.json", 'utf8', (err,data) => {
         var heroName = hero.name.replace('npc_dota_hero','');
         var suff = "sb.png"
         queryString = heroName + "_" + suff;
-        buildRequest(heroName, suffix, queryString);
+        buildRequest(heroName, suff, queryString);
     }
 });
 
