@@ -4,7 +4,7 @@ const path = require('path');
 const http = require('http');
 const bodyParser = require('body-parser');
 
-const dotaAPI = require('./controllers/dotaAPI')
+const dotaAPI = require('./controllers/dotaHistoryAPI')
 
 const app = express();
 
