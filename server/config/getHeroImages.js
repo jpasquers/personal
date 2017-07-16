@@ -6,7 +6,7 @@ var http = require('http')
 var imgUrl = "http://cdn.dota2.com/apps/dota2/images/heroes/"
 
 fs.readFile("../static/heroList.json", 'utf8', (err,data) => {
-    var heroList = JSON.parse(data).heroes;
+    var heroList = JSON.parse(data);
 
     for (var i=0; i< heroList.length; i++) {
         var hero = heroList[i];
