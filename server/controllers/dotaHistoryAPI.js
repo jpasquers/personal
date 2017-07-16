@@ -38,14 +38,15 @@ module.exports = {
 
 supplementMatchStats = (match, sucFn) => {
     fs.readFile("./static/heroList.json", 'utf8', (err,data) => {
-        console.log(err);
+        console.log(match);
         var heroList = JSON.parse(data);
 
-        var heroName = heroList.map((hero) => {
-            if (hero.id == match.hero_id) {
-                return hero.localized_name;
-            }
+        var selectedHero = heroList.find((hero) => {
+            return hero.id == match.hero_id;
         });
+        
+        var heroName = selectedHero.localized_name;
+
         match.heroName = heroName;
         sucFn(heroName);
 
