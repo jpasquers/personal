@@ -8,7 +8,7 @@ import { DotaGame } from './dota-game';
   styleUrls: ['./gaming.component.css']
 })
 export class GamingComponent implements OnInit {
-  previousGames: [];
+  previousGames: any[];
 
   constructor(private gamingService: GamingService) { 
     this.previousGames = [];
