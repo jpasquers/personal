@@ -38,7 +38,7 @@ module.exports = {
 
 supplementMatchStats = (match, sucFn) => {
     fs.readFile("/static/heroList.json", 'utf8', (err,data) => {
-        console.log(data);
+        console.log(err);
         var heroList = JSON.parse(data);
 
         var heroName = data.map((hero) => {
