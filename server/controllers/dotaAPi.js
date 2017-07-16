@@ -16,7 +16,7 @@ module.exports = {
             var matchList = JSON.parse(body);
             res.send(jsonResponse);
         })
-    }
+    },
 
     mostRecentDotaGame: (req, res) => {
         request({
