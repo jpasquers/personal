@@ -19,4 +19,7 @@ export class HomeComponent implements OnInit {
     this.router.navigate([path]);
   }
 
+  scrollDown() {
+    document.querySelector("#firstRow").scrollIntoView();
+  }
 }

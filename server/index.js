@@ -4,6 +4,8 @@ const path = require('path');
 const http = require('http');
 const bodyParser = require('body-parser');
 
+const gameHistory = require('./controllers/gameHistory')
+
 const app = express();
 
 // Parsers for POST data
@@ -12,6 +14,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Point static path to dist
 app.use(express.static(path.join(__dirname, '../dist')));
+
+app.get('/gameHistory/Dota', gameHistory.recentDotaGames)
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../dist/index.html'));

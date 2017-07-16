@@ -1,4 +1,5 @@
 <div class="start">
+  <span class="glyphicon glyphicon-menu-down go-down" (click)="scrollDown()"></span>
   <img src="assets/logo_final.png"/>
   <div class="start-blurb">
       <p class="welcome">Welcome to my web site! My name is Joey Pasque, and I'm currently a Software Developer for AT&T. I love music, track, family, and the occassional video game ;) </p>
@@ -10,7 +11,7 @@
 </div>
 
 <div class="container-fluid">
-  <div class="row odd-row music-row interest-row" (click)="go('/music')">
+  <div class="row odd-row music-row interest-row" id="firstRow" (click)="go('/music')">
     <div class="col-sm-6 vcentered">
       <h3>Lorem Ipsum, sit dolor amet.</h3>
       <p class="welcome">Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.</p>

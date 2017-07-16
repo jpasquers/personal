@@ -12,6 +12,8 @@ import { MusicComponent } from './music/music.component';
 import { GamingComponent } from './gaming/gaming.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 
+import { GamingService } from './gaming/gaming.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [GamingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
