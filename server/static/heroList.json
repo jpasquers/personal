@@ -1,5 +1,5 @@
 
-"heroes":[
+{"heroes":[
 {
 "name":"npc_dota_hero_antimage",
 "id":1
@@ -452,4 +452,4 @@
 "name":"npc_dota_hero_monkey_king",
 "id":114
 }
-]
+]}
