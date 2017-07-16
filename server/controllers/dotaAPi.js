@@ -2,7 +2,7 @@ var request = require('request');
 
 const steamKey = "51AB4090329A61410CA55FB77060FEC1";
 const gameAPI = "https://api.opendota.com/api";
-const gameHistoryAPI = gameHistoryAPI + "/players/86606128/recentMatches";
+const gameHistoryAPI = gameAPI + "/players/86606128/recentMatches";
 //const heroList = JSON.parse("../static/heroList.json");
 
 module.exports = {
