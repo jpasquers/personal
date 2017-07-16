@@ -10,7 +10,7 @@ fs.readFile("../static/heroList.json", 'utf8', (err,data) => {
 
     for (var i=0; i< heroList.length; i++) {
         var hero = heroList[i];
-        var heroName = hero.name.replace('npc_dota_hero','');
+        var heroName = hero.name.replace('npc_dota_hero_','');
         var suff = "sb.png"
         queryString = heroName + "_" + suff;
         buildRequest(heroName, suff, queryString);
