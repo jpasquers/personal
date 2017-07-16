@@ -18,7 +18,6 @@ export class GamingComponent implements OnInit {
     this.gamingService.getMostRecentDotaGame().subscribe((resp) =>{
       this.mostRecentGame = resp;
     },(error) => {
-
     })
   }
 

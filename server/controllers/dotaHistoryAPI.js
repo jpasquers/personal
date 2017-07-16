@@ -29,7 +29,7 @@ module.exports = {
         }, (err, response, body) => {
             var matchList = JSON.parse(body);
             var mostRecentMatch = matchList[0];
-            var match = supplementMatchStats(mostRecentMatch, (result) => {
+            supplementMatchStats(mostRecentMatch, (result) => {
                 res.send(result);
             });
         })
@@ -38,6 +38,7 @@ module.exports = {
 
 supplementMatchStats = (match, sucFn) => {
     fs.readFile("../static/heroList.json", 'utf8', (err,data) => {
+        console.log(data);
         var heroList = JSON.parse(data);
 
         var heroName = data.map((hero) => {
