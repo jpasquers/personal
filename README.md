@@ -1,3 +1,10 @@
+This is a web application for my personal web site. The technology stack is Angular 2 communicating with a NodeJS/Express backend.
+
+As a quick note, I am aware that for the purposes of a personal website with minimal time spent on an individual page, an SPA built with Angular 2 is by far not the most efficient way. The purpose of this site is not to be incredibly lightweight, but to showcase my ability to develop an Angular 2 application and a corresponding backend. In fact, at some points there may be superfluous calls to the backend, for the pure purpose to create a scenario wherein I needed to build a backend. It is very possible that in the future I will build the same/a similar site using react and redux, but for now my focus is on Angular 2.
+
+
+The following is generic information about any angular-cli project:
+
 # Personal
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-beta.32.3.
