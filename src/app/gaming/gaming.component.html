@@ -1,1 +1,16 @@
-<div>{{mostRecentGame.heroName}}</div>
+<div class="container-fluid">
+    <div class="row">
+        <h1> My Most Recent Dota Game (Judge Away) </h1>
+        <div class="game-container">
+            <div class="img-container">
+                <img class="loading-img" [hidden]="heroImageLoaded"/>
+                <img class="hero-img" *ngIf="gameLoaded" 
+                    [src]="heroImageURI" (load)="heroImageLoaded = true"
+                    [hidden]="!gameImageLoaded"/>
+            </div>
+            <div class="info-container">
+                <div class="kills">
+            </div>
+        </div>
+    </div>
+</div>
