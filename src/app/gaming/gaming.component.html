@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="row">
-        <h1> My Most Recent Dota Game (Judge Away) </h1>
+        <h1 class="title"> My Most Recent Dota Game (Judge Away) </h1>
         <div class="game-container">
             <div class="img-container">
                 <img class="loading-img" [hidden]="heroImageLoaded"/>
@@ -9,7 +9,16 @@
                     [hidden]="!gameImageLoaded"/>
             </div>
             <div class="info-container">
-                <div class="kills">
+                <div class="info-item hero">{{mostRecentGame.heroLocalizedName}}</div>
+                <div class="info-item kills">
+                    Kills: {{mostRecentGame.kills}}
+                </div>
+                <div class="info-item deaths">
+                    Deaths: {{mostRecentGame.deaths}}
+                </div>
+                <div class="info-item assists">
+                    Assists: {{mostRecentGame.assists}}
+                </div>
             </div>
         </div>
     </div>

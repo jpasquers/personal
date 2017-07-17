@@ -29,8 +29,8 @@ module.exports = {
         }, (err, response, body) => {
             var matchList = JSON.parse(body);
             var mostRecentMatch = matchList[0];
-            supplementMatchStats(mostRecentMatch, (result) => {
-                res.send(result);
+            supplementMatchStats(mostRecentMatch, (updatedMatch) => {
+                res.send(updatedMatch);
             });
         })
     }
@@ -45,8 +45,10 @@ supplementMatchStats = (match, sucFn) => {
             return hero.id == match.hero_id;
         });
         
-        var heroName = selectedHero.localized_name;
+        var heroName = selectedHero.name;
+        var heroLocalizedName = selectedHero.localized_name;
 
+        match.heroLocalizedName = heroLocalizedName;
         match.heroName = heroName;
         sucFn(match);
 

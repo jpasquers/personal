@@ -1,0 +1,14 @@
+.game-container {
+    background: rgb(180,180,180);
+    padding: 20px;
+}
+
+.title, .game-container {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-container {
+    float: left;
+}
