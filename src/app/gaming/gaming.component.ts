@@ -9,27 +9,28 @@ import { DotaGame } from './dota-game';
 })
 export class GamingComponent implements OnInit {
   mostRecentGame: any;
+  heroImageURI: String;
   gameLoaded: boolean;
   heroImageLoaded: boolean;
-  heroImageURI: String;
 
   constructor(private gamingService: GamingService) { 
     this.mostRecentGame = {};
     this.gameLoaded = false;
     this.heroImageLoaded = false;
-    this.heroImageURI = "";
+    this.heroImageURI = '';
   }
 
   ngOnInit() {
     this.gamingService.getMostRecentDotaGame().subscribe((resp) =>{
       this.mostRecentGame = resp;
       this.gameLoaded = true;
-      this.buildHeroImageURI();
+      this.buildImageURI();
     },(error) => {
+      
     })
   }
 
-  buildHeroImageURI() {
+  buildImageURI() {
     var heroName = this.mostRecentGame.heroName.replace('npc_dota_hero_','');
     this.heroImageURI = heroName + "_sb.png";
   }
