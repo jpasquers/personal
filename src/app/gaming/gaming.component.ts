@@ -32,7 +32,7 @@ export class GamingComponent implements OnInit {
 
   buildImageURI() {
     var heroName = this.mostRecentGame.heroName.replace('npc_dota_hero_','');
-    this.heroImageURI = "imgs/" + heroName + "_md.png";
+    this.heroImageURI = "imgs/" + heroName + "_lg.png";
   }
 
 }
