@@ -13,7 +13,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Point static path to dist
-app.use(express.static(path.join(__dirname, '../dist')));
+app.use('/', express.static(path.join(__dirname, '../public/dist')));
+app.use('/imgs', express.static(path.join(__dirname, '../public/static/imgs')))
 
 app.get('/mostRecentGame/Dota', dotaAPI.mostRecentDotaGame);
 
