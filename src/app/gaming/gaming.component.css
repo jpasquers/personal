@@ -1,5 +1,5 @@
 .game-container {
-    background: rgb(180,180,180);
+    background: rgb(230,230,230);
     padding: 20px;
 }
 
@@ -9,7 +9,7 @@
 }
 
  .game-container {
-    width: 800px;
+    width: 400px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 3px;
@@ -27,6 +27,7 @@
 
 .info-container {
     font-size: 18px;
+    padding: 10px;
 }
 
 .img-container .hero-img {
