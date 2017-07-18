@@ -5,3 +5,10 @@
 .glyphicon-star-empty:hover, .glyphicon-star:hover {
     cursor: pointer;
 }
+
+.glyphicon-star-empty::before, .glyphicon-star::before {
+    font-size: 16px;
+    color: #FFDB5B;
+    padding-left: 2px;
+    padding-right: 2px;
+}

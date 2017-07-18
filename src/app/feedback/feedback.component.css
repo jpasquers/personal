@@ -9,6 +9,3 @@
     display: inline-block;
 }
 
-.glyphicon-star-empty:hover, .glyphicon-star:hover {
-    cursor: pointer;
-}
