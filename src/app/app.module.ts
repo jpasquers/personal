@@ -13,6 +13,7 @@ import { GamingComponent } from './gaming/gaming.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 
 import { GamingService } from './gaming/gaming.service';
+import { RatingComponent } from './rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { GamingService } from './gaming/gaming.service';
     TrackComponent,
     MusicComponent,
     GamingComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,
