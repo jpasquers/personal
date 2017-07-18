@@ -1,0 +1,10 @@
+<div class="form-group star-group" (mouseover)="hoverStarContainer(true)" (mouseleave)="hoverStarContainer(false)">
+  <span 
+    *ngFor="let index of [0,1,2,3,4]"
+    [ngClass]="{'glyphicon-star-empty': !starArrayVisible[index],
+                'glyphicon-star': starArrayVisible[index]}"
+    (click)="starClick(index)" 
+    (mouseover) = "starHover(index)"
+    class="glyphicon">
+  </span>
+</div>

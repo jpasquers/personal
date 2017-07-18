@@ -7,7 +7,8 @@
 
 .interest-row:hover {
     cursor: pointer;
-    border: 1px solid rgba(50,50,50,0.5);
+    /*border: 1px solid rgba(50,50,50,0.5);*/
+    box-shadow: 0 8px 3px 3px rgba(0,0,0,0.3);
 }
 
 .odd-row {
