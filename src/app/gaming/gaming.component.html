@@ -4,8 +4,7 @@
         <div class="game-container">
             <div class="img-container">
                 <img class="hero-img" *ngIf="gameLoaded" 
-                    [src]="heroImageURI" (load)="heroImageLoaded = true"
-                    [hidden]="!gameImageLoaded"/>
+                    [src]="heroImageURI"/>
             </div>
             <div class="info-container">
                 <div class="info-item hero">{{mostRecentGame.heroLocalizedName}}</div>
