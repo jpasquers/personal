@@ -21,7 +21,7 @@ app.get('/mostRecentGame/Dota', dotaAPI.mostRecentDotaGame);
 app.get('/recentGames/Dota', dotaAPI.recentDotaGames);
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../dist/index.html'));
+  res.sendFile(path.join(__dirname, '../public/dist/index.html'));
 });
 
 const port = 8082;
