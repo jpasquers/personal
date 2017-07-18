@@ -3,7 +3,6 @@
         <h1 class="title"> My Most Recent Dota Game (Judge Away) </h1>
         <div class="game-container">
             <div class="img-container">
-                <img class="loading-img" [hidden]="heroImageLoaded"/>
                 <img class="hero-img" *ngIf="gameLoaded" 
                     [src]="heroImageURI" (load)="heroImageLoaded = true"
                     [hidden]="!gameImageLoaded"/>
