@@ -1,5 +1,5 @@
 .music-container {
-    max-width: 1200px;
+    max-width: 1000px;
 }
 
 .vert-nav {
@@ -15,7 +15,10 @@
 }
 
 .vert-nav ul li {
-    padding: 20px;
+    padding: 5px 15px;
+    border: 1px solid rgb(90,150,220);
+    border-radius: 50px;
+    margin-bottom: 15px;
 }
 
 .vert-nav ul li a {
@@ -23,12 +26,13 @@
     color: rgb(90,150,220);
 }
 
-.vert-nav ul li a.active {
-    font-weight: bold;
+.vert-nav ul li.active, .vert-nav ul li:hover {
+    background: rgb(90,150,220);
+    cursor: pointer;
 }
 
-.vert-nav ul li a:hover {
-    font-weight: bold;
+.vert-nav ul li.active a, .vert-nav ul li:hover a {
+    color: white;
 }
 
 .vert-nav ul li a:active, 
