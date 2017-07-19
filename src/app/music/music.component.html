@@ -1,3 +1,18 @@
-<p>
-  music works!
-</p>
+<div class="container-fluid music-container">
+  <div class="row music-row">
+    <nav class="vert-nav">
+      <ul>
+        <li>
+          <a routerLink="/music/playing" routerLinkActive="active"> Currently Playing </a>
+        </li>
+        <li>
+          <a routerLink="/music/artists" routerLinkActive="active"> My Top Artists </a>
+        </li>
+        <li>
+          <a routerLink="/music/songs" routerLinkActive="active"> My Top Songs </a>
+        </li>
+      </ul>
+    </nav>
+    <router-outlet></router-outlet>
+  </div>
+</div>

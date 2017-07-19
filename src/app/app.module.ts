@@ -5,10 +5,11 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { MusicModule } from './music/music.module';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { TrackComponent } from './track/track.component';
-import { MusicComponent } from './music/music.component';
 import { GamingComponent } from './gaming/gaming.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 
@@ -20,7 +21,6 @@ import { RatingComponent } from './rating/rating.component';
     AppComponent,
     HomeComponent,
     TrackComponent,
-    MusicComponent,
     GamingComponent,
     FeedbackComponent,
     RatingComponent
@@ -29,7 +29,8 @@ import { RatingComponent } from './rating/rating.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MusicModule
   ],
   providers: [GamingService],
   bootstrap: [AppComponent]

@@ -10,7 +10,7 @@ import { GamingComponent } from './gaming/gaming.component';
 const appRoutes: Routes = [
   {path: "", redirectTo: "/home", pathMatch:'full'},
   {path: "home", component: HomeComponent},
-  {path: "music", component: MusicComponent},
+  //{path: "music", component: MusicComponent},
   {path: "gaming", component: GamingComponent},
   {path: "track", component: TrackComponent},
   {path: "feedback", component: FeedbackComponent} 

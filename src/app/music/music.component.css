@@ -1,0 +1,38 @@
+.music-container {
+    max-width: 1200px;
+}
+
+.vert-nav {
+    float: left;
+}
+
+.music-row {
+    margin-top: 40px;
+}
+
+.vert-nav ul {
+    list-style-type: none;
+}
+
+.vert-nav ul li {
+    padding: 20px;
+}
+
+.vert-nav ul li a {
+    font-size: 18px;
+    color: rgb(90,150,220);
+}
+
+.vert-nav ul li a.active {
+    font-weight: bold;
+}
+
+.vert-nav ul li a:hover {
+    font-weight: bold;
+}
+
+.vert-nav ul li a:active, 
+.vert-nav ul li a:focus,
+.vert-nav ul li a:hover {
+    text-decoration: none;
+}
