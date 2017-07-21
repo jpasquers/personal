@@ -27,7 +27,7 @@ app.get('/recentGames/Dota', dotaAPI.recentDotaGames);
 app.post('/review', reviewAPI.postReview);
 app.get('/reviews', reviewAPI.getReviews);
 
-app.post('/currentlyPlaying', spotifyAPI.getCurrentlyPlaying);
+app.get('/currentlyPlaying', spotifyAPI.getCurrentlyPlaying);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
