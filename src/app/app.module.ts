@@ -14,6 +14,7 @@ import { GamingComponent } from './gaming/gaming.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 
 import { GamingService } from './gaming/gaming.service';
+import { FeedbackService } from './feedback/feedback.service';
 import { RatingComponent } from './rating/rating.component';
 
 @NgModule({
@@ -32,7 +33,7 @@ import { RatingComponent } from './rating/rating.component';
     AppRoutingModule,
     MusicModule
   ],
-  providers: [GamingService],
+  providers: [GamingService, FeedbackService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
