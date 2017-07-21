@@ -8,7 +8,7 @@ import { PlayingService } from './playing.service';
   styleUrls: ['./playing.component.css']
 })
 export class PlayingComponent implements OnInit {
-  playing: String;
+  playing: any;
   constructor(private playingService: PlayingService) { }
 
   ngOnInit() {
@@ -16,7 +16,7 @@ export class PlayingComponent implements OnInit {
       console.log(playing);
       this.playing = playing;
     }, (err) => {
-
+      console.log(err);
     })
   }
 
