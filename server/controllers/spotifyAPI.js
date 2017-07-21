@@ -1,12 +1,11 @@
 const fs = require('fs');
+const path = require('path');
 
 refreshToken = (succFn,errFn) => {
-    fs.readFile("../config/keys.json", 'utf8', (err,data) => {
-        console.log("helloooo");
+    var keyPath = path.join(__dirname, '..', '..', 'config', 'keys.json');
+    fs.readFile(keyPath, 'utf8', (err,data) => {
         if (err) errFn();
-        console.log("read file");
         var keys = JSON.parse(data);
-        console.log(keys);
         var refresh_token = keys.spotify_refresh_token;
         var cli_id = keys.spotify_client_id;
         var cli_secret = keys.spotify_client_secret;
@@ -26,7 +25,6 @@ refreshToken = (succFn,errFn) => {
 
         request.post(authOptions, function(error, response, body) {
             if (!error && response.statusCode === 200) {
-                console.log("got token");
                 var access_token = body.access_token;
                 succFn(access_token);
             }
@@ -37,7 +35,6 @@ refreshToken = (succFn,errFn) => {
 
 module.exports = {
     getCurrentlyPlaying: (req,res) => {
-        console.log("hello");
         refreshToken((access_token) => {
             var options = {
                 url: 'https://api.spotify.com/v1/me/player/currently-playing',
@@ -46,7 +43,6 @@ module.exports = {
             };
 
             request.get(options, function(error, response, body) {
-                console.log("got songs");
                 var song = JSON.parse(body);
                 res.send(song);
             });
