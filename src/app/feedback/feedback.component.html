@@ -18,7 +18,7 @@
     <div *ngFor="let review of reviews" class="review col-md-4 col-sm-6 col-xs-12">
       <p><span>Name: </span> {{review.name}}</p>
       <p><span>Comment: </span> {{review.comment}}</p>
-      <app-rating [fixed]="true" [inital]="review.rating" (onRatingUpdate)=""></app-rating>
+      <app-rating [fixed]="true" [inital]="review.rating"></app-rating>
     </div>
   </div>
 </div>
