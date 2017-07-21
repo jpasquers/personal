@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { PlayingService } from './playing.service';
+
 @Component({
   selector: 'app-playing',
   templateUrl: './playing.component.html',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private playingService: PlayingService) { }
 
   ngOnInit() {
+    this.playingService.getCurrentlyPlaying().subscribe((playing) => {
+      console.log(playing);
+    }, (err) => {
+
+    })
   }
 
 }

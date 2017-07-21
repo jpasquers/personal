@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 
 const dotaAPI = require('./controllers/dotaHistoryAPI')
 const reviewAPI = require('./controllers/reviewAPI');
+const spotifyAPI = require('./controllers/spotifyAPI');
 
 const app = express();
 
@@ -25,6 +26,8 @@ app.get('/recentGames/Dota', dotaAPI.recentDotaGames);
 
 app.post('/review', reviewAPI.postReview);
 app.get('/reviews', reviewAPI.getReviews);
+
+app.post('/currentlyPlaying', spotifyAPI.getCurrentlyPlaying);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/dist/index.html'));
