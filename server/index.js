@@ -3,10 +3,14 @@ const express = require('express');
 const path = require('path');
 const http = require('http');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 const dotaAPI = require('./controllers/dotaHistoryAPI')
+const reviewAPI = require('./controllers/reviewAPI');
 
 const app = express();
+
+mongoose.connect('mongodb://localhost/personal');
 
 // Parsers for POST data
 app.use(bodyParser.json());
@@ -17,8 +21,10 @@ app.use('/', express.static(path.join(__dirname, '../public/dist')));
 app.use('/imgs', express.static(path.join(__dirname, '../public/static/imgs')))
 
 app.get('/mostRecentGame/Dota', dotaAPI.mostRecentDotaGame);
-
 app.get('/recentGames/Dota', dotaAPI.recentDotaGames);
+
+app.post('/review', reviewAPI.postReview);
+app.get('/reviews', reviewAPI.getReviews);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/dist/index.html'));

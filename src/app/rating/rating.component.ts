@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'app-rating',
@@ -11,6 +11,12 @@ export class RatingComponent implements OnInit {
   starArrayHover: any[];
   rating: Number;
 
+  @Input()
+  fixed: boolean;
+  
+  @Input()
+  initial: Number;
+
   @Output() onRatingUpdate = new EventEmitter<Number>();
 
   constructor() {
@@ -20,26 +26,39 @@ export class RatingComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (this.fixed) {
+      /*rating will be passed in as 1-5*/
+      for (var i=0; i<this.initial; i++) {
+        this.starArrayModel[i] = true;
+      }
+      this.starArrayVisible = this.starArrayModel.slice();
+    }
   }
 
   starClick(index) {
-    this.starArrayModel = this.starArrayModel.map((val, i) => i <= index);
-    this.rating = index + 1;
-    this.onRatingUpdate.emit(this.rating);
+    if (!this.fixed) {
+      this.starArrayModel = this.starArrayModel.map((val, i) => i <= index);
+      this.rating = index + 1;
+      this.onRatingUpdate.emit(this.rating);
+    }
   }
 
   starHover(index) {
-    this.starArrayHover = this.starArrayHover.map((val, i) => i <= index);
-    this.starArrayVisible = this.starArrayHover.slice();
+    if (!this.fixed) {
+      this.starArrayHover = this.starArrayHover.map((val, i) => i <= index);
+      this.starArrayVisible = this.starArrayHover.slice();
+    }
   }
 
   hoverStarContainer(isHovering) {
-    if (isHovering) {
-      this.starArrayVisible = this.starArrayHover.slice();
-    }
-    else {
-      this.starArrayVisible = this.starArrayModel.slice();
-      this.starArrayHover = new Array(5).fill(false);
+    if (!this.fixed) {
+      if (isHovering) {
+        this.starArrayVisible = this.starArrayHover.slice();
+      }
+      else {
+        this.starArrayVisible = this.starArrayModel.slice();
+        this.starArrayHover = new Array(5).fill(false);
+      }
     }
   }
 

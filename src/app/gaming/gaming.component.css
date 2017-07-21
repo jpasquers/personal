@@ -23,13 +23,21 @@
 
 .img-container{
     float: left;
+    width: 100%;
 }
 
 .info-container {
     font-size: 18px;
-    padding: 10px;
+    padding: 5px 20px 20px;
+}
+
+.info-item.hero {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
 }
 
 .img-container .hero-img {
-    padding: 10px;
+    padding: 20px;
+    width: 100%;
 }
