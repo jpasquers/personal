@@ -8,13 +8,13 @@ import { PlayingService } from './playing.service';
   styleUrls: ['./playing.component.css']
 })
 export class PlayingComponent implements OnInit {
-  playing: any;
+  songName: String;
   constructor(private playingService: PlayingService) { }
 
   ngOnInit() {
     this.playingService.getCurrentlyPlaying().subscribe((playing) => {
       console.log(playing.name);
-      this.playing = playing.name;
+      this.songName = playing.name;
     }, (err) => {
       console.log(err);
     })
