@@ -11,11 +11,11 @@
         <textarea [(ngModel)]="model.comment" class="form-control" id="comment" required></textarea>
       </div>
       <app-rating [fixed]="false" [initial]="0" (onRatingUpdate)="onRatingUpdate($event)"></app-rating>
-      <button type="submit" class="btn" [disabled]="!reviewForm.form.valid || !rating"
+      <button type="submit" class="btn" [disabled]="!reviewForm.form.valid || !rating">Submit</button>
     </form>
   </div>
   <div class="row feedback-list-container">
-    <div *ngFor="let review of reviews" classs="review col-md-4 col-sm-6 col-xs-12">
+    <div *ngFor="let review of reviews" class="review col-md-4 col-sm-6 col-xs-12">
       <p><span>Name: </span> {{review.name}}</p>
       <p><span>Comment: </span> {{review.comment}}</p>
       <app-rating [fixed]="true" [inital]="review.rating" (onRatingUpdate)=""></app-rating>
