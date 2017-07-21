@@ -24,7 +24,7 @@ import { RatingComponent } from './rating/rating.component';
     TrackComponent,
     GamingComponent,
     FeedbackComponent,
-    RatingComponent
+    RatingComponent,
   ],
   imports: [
     BrowserModule,
