@@ -19,7 +19,7 @@ export class PlayingComponent implements OnInit {
 
   ngOnInit() {
     this.playingService.getCurrentlyPlaying().subscribe((playing) => {
-      console.log(playing.name);
+      console.log(playing);
       this.playing = playing;
       this.playing.uri = this.sanitizer.bypassSecurityTrustResourceUrl(this.playing.uri);
     }, (err) => {
