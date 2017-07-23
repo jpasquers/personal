@@ -28,6 +28,7 @@ app.post('/review', reviewAPI.postReview);
 app.get('/reviews', reviewAPI.getReviews);
 
 app.get('/currentlyPlaying', spotifyAPI.getCurrentlyPlaying);
+app.get('/topArtists', spotifyAPI.getTopArtists);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/dist/index.html'));
