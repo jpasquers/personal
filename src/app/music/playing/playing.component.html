@@ -5,6 +5,6 @@
     <h3 class="album" *ngIf="playing.album">Off of: {{playing.album.name}}</h3>
 </div>
 
-<iframe *ngIf="playing.uri" [src]="embedURI + playing.uri" 
+<iframe *ngIf="widgetURI" [src]="widgetURI" 
     width="300" height="300" frameborder="0" allowtransparency="true">
 </iframe>

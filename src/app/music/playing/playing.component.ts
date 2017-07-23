@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 
 import { PlayingService } from './playing.service';
@@ -11,17 +11,19 @@ import { PlayingService } from './playing.service';
 })
 export class PlayingComponent implements OnInit {
   playing: any;
-  embedURI: String ;
+  embedBaseURI: String ;
+  widgetURI: SafeResourceUrl;
+
   constructor(private playingService: PlayingService, private sanitizer: DomSanitizer) {
     this.playing = {};
-    this.embedURI = "https://open.spotify.com/embed?";
+    this.embedBaseURI = "https://open.spotify.com/embed?";
   }
 
   ngOnInit() {
     this.playingService.getCurrentlyPlaying().subscribe((playing) => {
       console.log(playing);
       this.playing = playing;
-      this.playing.uri = this.sanitizer.bypassSecurityTrustResourceUrl(this.playing.uri);
+      this.widgetURI = this.sanitizer.bypassSecurityTrustResourceUrl(this.playing.uri);
     }, (err) => {
       console.log(err);
     })
