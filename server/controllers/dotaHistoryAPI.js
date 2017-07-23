@@ -1,5 +1,6 @@
 var request = require('request');
 var fs = require('fs');
+const path = require('path');
 
 const steamKey = "51AB4090329A61410CA55FB77060FEC1";
 const gameAPI = "https://api.opendota.com/api";
@@ -37,7 +38,8 @@ module.exports = {
 }
 
 supplementMatchStats = (match, sucFn) => {
-    fs.readFile(__dirname + "/../static/heroList.json", 'utf8', (err,data) => {
+    heroListPath = path.join(__dirname, "..", "static", "heroList.json");
+    fs.readFile(heroListPath, (err,data) => {
         var heroList = JSON.parse(data);
 
         var selectedHero = heroList.find((hero) => {

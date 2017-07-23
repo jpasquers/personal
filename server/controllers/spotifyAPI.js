@@ -1,8 +1,10 @@
 const fs = require('fs');
 const request = require('request');
+const path = require('path');
 
 refreshToken = (succFn,errFn) => {
-    fs.readFile("../config/keys.json", 'utf8', (err,data) => {
+    var keyPath = path.join(__dirname, '..', '..', 'config', 'keys.json');
+    fs.readFile(keyPath, 'utf8', (err,data) => {
         if (err) errFn();
         var keys = JSON.parse(data);
         var refresh_token = keys.spotify_refresh_token;
