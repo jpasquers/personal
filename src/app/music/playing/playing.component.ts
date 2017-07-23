@@ -23,7 +23,7 @@ export class PlayingComponent implements OnInit {
     this.playingService.getCurrentlyPlaying().subscribe((playing) => {
       console.log(playing);
       this.playing = playing;
-      this.widgetURI = this.sanitizer.bypassSecurityTrustResourceUrl(this.playing.uri);
+      this.widgetURI = this.sanitizer.bypassSecurityTrustResourceUrl(this.embedBaseURI + this.playing.uri);
     }, (err) => {
       console.log(err);
     })
