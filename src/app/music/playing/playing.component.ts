@@ -13,7 +13,7 @@ export class PlayingComponent implements OnInit {
 
   ngOnInit() {
     this.playingService.getCurrentlyPlaying().subscribe((playing) => {
-      console.log(playing.name);
+      console.log(playing);
       this.songName = playing.name;
     }, (err) => {
       console.log(err);

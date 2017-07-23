@@ -7,3 +7,11 @@
 .star-group {
     display: inline-block;
 }
+
+.feedback-list-container {
+    margin-top: 20px;	
+}
+
+.review {
+    border-right: 1px solid rgb(50,50,50);
+}
