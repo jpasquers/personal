@@ -1,7 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
+/public/dist
+/public/static
 /tmp
 
 # dependencies
@@ -32,7 +33,7 @@ npm-debug.log
 testem.log
 /typings
 /nohup.out
-
+*/imgs/*
 # e2e
 /e2e/*.js
 /e2e/*.map
@@ -43,3 +44,4 @@ Thumbs.db
 
 #static server dota image files
 *static/imgs/*
+*config/*
