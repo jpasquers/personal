@@ -1,2 +1,10 @@
-<h3 class="title">What Song Am I Listening To:</h3>
-<h3 class="title">{{songName}}</h3>
+<div class="song-info">
+    <h3 class="title">What Song Am I Listening To:</h3>
+    <h3 class="song-title" *ngIf="playing.name">Title: {{playing.name}}</h3>
+    <h3 class="artist" *ngIf="playing.artists">By: {{playing.artists[0].name}}</h3>
+    <h3 class="album" *ngIf="playing.album">Off of: {{playing.album.name}}</h3>
+</div>
+
+<iframe *ngIf="playing.uri" [src]="embedURI + playing.uri" 
+    width="300" height="300" frameborder="0" allowtransparency="true">
+</iframe>

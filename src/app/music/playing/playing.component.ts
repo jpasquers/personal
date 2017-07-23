@@ -8,13 +8,17 @@ import { PlayingService } from './playing.service';
   styleUrls: ['./playing.component.css']
 })
 export class PlayingComponent implements OnInit {
-  songName: String;
-  constructor(private playingService: PlayingService) { }
+  playing: any;
+  embedURI: String ;
+  constructor(private playingService: PlayingService) {
+    this.playing = {};
+    this.embedURI = "https://open.spotify.com/embed?";
+  }
 
   ngOnInit() {
     this.playingService.getCurrentlyPlaying().subscribe((playing) => {
       console.log(playing);
-      this.songName = playing.name;
+      this.playing = playing;
     }, (err) => {
       console.log(err);
     })
