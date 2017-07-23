@@ -11,13 +11,8 @@ module.exports = {
     },
 
     postReview: (req,res) => {
-        var review = new Review({
-            name: req.body.name,
-            comment: req.body.comment,
-            rating: req.body.rating
-        })
-
-        review.save(function(er, retReview) {
+        var review = new Review(Object.assign({}, req.body));
+        review.save(function(err, retReview) {
             if (err) {
                 res.status(500).send('failed to create review');
             }
