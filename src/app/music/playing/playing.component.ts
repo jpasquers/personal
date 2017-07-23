@@ -16,7 +16,7 @@ export class PlayingComponent implements OnInit {
 
   constructor(private playingService: PlayingService, private sanitizer: DomSanitizer) {
     this.playing = {};
-    this.embedBaseURI = "https://open.spotify.com/embed?";
+    this.embedBaseURI = "https://open.spotify.com/embed?uri=";
   }
 
   ngOnInit() {

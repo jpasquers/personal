@@ -4,7 +4,8 @@
     <h3 class="artist" *ngIf="playing.artists">By: {{playing.artists[0].name}}</h3>
     <h3 class="album" *ngIf="playing.album">Off of: {{playing.album.name}}</h3>
 </div>
-
-<iframe *ngIf="widgetURI" [src]="widgetURI" 
-    width="300" height="300" frameborder="0" allowtransparency="true">
-</iframe>
+<div class="widget-container">
+    <iframe *ngIf="widgetURI" [src]="widgetURI" 
+        width="300" height="300" frameborder="0" allowtransparency="true">
+    </iframe>
+</div>
