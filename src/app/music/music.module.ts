@@ -10,6 +10,7 @@ import { ArtistsComponent } from './artists/artists.component';
 import { SongsComponent } from './songs/songs.component';
 
 import { PlayingService } from './playing/playing.service';
+import { ArtistsService } from './artists/artists.service';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,6 @@ import { PlayingService } from './playing/playing.service';
     HttpModule,
     MusicRoutingModule
   ],
-  providers: [PlayingService]
+  providers: [PlayingService, ArtistsService]
 })
 export class MusicModule { }
