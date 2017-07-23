@@ -13,4 +13,4 @@ var reviewSchema = new Schema({
 
 var Review = mongoose.model('Review', reviewSchema);
 
-module.exports = User;
+module.exports = Review;
