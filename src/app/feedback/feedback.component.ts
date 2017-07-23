@@ -15,7 +15,10 @@ export class FeedbackComponent implements OnInit {
   requestSuccess: Boolean;
   
   constructor(private feedbackService: FeedbackService) {
-    
+    this.model = {
+      name: "",
+      comment: ""
+    }
   }
 
   ngOnInit() {
