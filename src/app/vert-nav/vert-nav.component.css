@@ -1,0 +1,37 @@
+.vert-nav {
+    float: left;
+    height: 100vh;
+    margin-top: 40px;
+}
+
+
+.vert-nav ul {
+    list-style-type: none;
+}
+
+.vert-nav ul li {
+    padding: 5px 15px;
+    border: 1px solid rgb(90,150,220);
+    border-radius: 50px;
+    margin-bottom: 15px;
+}
+
+.vert-nav ul li a {
+    font-size: 18px;
+    color: rgb(90,150,220);
+}
+
+.vert-nav ul li.active, .vert-nav ul li:hover {
+    background: rgb(90,150,220);
+    cursor: pointer;
+}
+
+.vert-nav ul li.active a, .vert-nav ul li:hover a {
+    color: white;
+}
+
+.vert-nav ul li a:active, 
+.vert-nav ul li a:focus,
+.vert-nav ul li a:hover {
+    text-decoration: none;
+}

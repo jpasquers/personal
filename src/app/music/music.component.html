@@ -1,18 +1,6 @@
 <div class="container-fluid music-container">
   <div class="row music-row">
-    <nav class="vert-nav">
-      <ul>
-        <li routerLink="/music/playing" routerLinkActive="active">
-          <a > Currently Playing </a>
-        </li>
-        <li routerLink="/music/artists" routerLinkActive="active" >
-          <a> My Top Artists </a>
-        </li>
-        <li routerLink="/music/songs" routerLinkActive="active">
-          <a> My Top Songs </a>
-        </li>
-      </ul>
-    </nav>
+    <app-vert-nav [items]="navItems"></app-vert-nav>
     <router-outlet></router-outlet>
   </div>
 </div>

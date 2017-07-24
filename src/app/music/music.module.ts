@@ -3,7 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+
 import { MusicRoutingModule } from './music-routing.module';
+import { VertNavModule } from '../vert-nav/vert-nav.module';
+
 import { MusicComponent } from './music.component';
 import { PlayingComponent } from './playing/playing.component';
 import { ArtistsComponent } from './artists/artists.component';
@@ -22,7 +25,8 @@ import { ArtistsService } from './artists/artists.service';
     BrowserModule,
     FormsModule,
     HttpModule,
-    MusicRoutingModule
+    MusicRoutingModule,
+    VertNavModule
   ],
   providers: [PlayingService, ArtistsService]
 })
