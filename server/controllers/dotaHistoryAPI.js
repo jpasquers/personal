@@ -2,6 +2,7 @@ var request = require('request');
 var fs = require('fs');
 const path = require('path');
 
+//Note that this value is not intended to be private, in fact it is included in query strings
 const steamKey = "51AB4090329A61410CA55FB77060FEC1";
 const gameAPI = "https://api.opendota.com/api";
 const gameHistoryAPI = gameAPI + "/players/86606128/recentMatches";
