@@ -1,13 +1,13 @@
 <div class="container-fluid">
     <div class="row">
         <h1 class="title"> My Most Recent Dota Game (Judge Away) </h1>
-        <div class="game-container">
+        <div class="game-container" *ngIf="mostRecentGame">
             <div class="img-container">
                 <img class="hero-img" *ngIf="gameLoaded" 
                     [src]="heroImageURI"/>
             </div>
-            <div class="info-container">
-                <div class="info-item hero">{{mostRecentGame.heroLocalizedName}}</div>
+            <div class="hero-name">{{mostRecentGame.heroLocalizedName}}</div>
+            <div class="info-container col-md-6 col-sm-6 col-xs-6">
                 <div class="info-item kills">
                     Kills: {{mostRecentGame.kills}}
                 </div>
@@ -16,6 +16,23 @@
                 </div>
                 <div class="info-item assists">
                     Assists: {{mostRecentGame.assists}}
+                </div>
+                <div class="info-item last-hits">
+                    Last hits: {{mostRecentGame.last_hits}}
+                </div>
+            </div>
+            <div class="info-container-2 col-md-6 col-sm-6 col-xs-6">
+                <div class="info-item xp-min">
+                    XP/min: {{mostRecentGame.xp_per_min}}
+                </div>
+                <div class="info-item gold-min">
+                    Gold/min: {{mostRecentGame.gold_per_min}}
+                </div>
+                <div class="info-item hero-dmg">
+                    Hero Damage: {{mostRecentGame.hero_damage}}
+                </div>
+                <div class="info-item tower-dmg">
+                    Tower Damage: {{mostRecentGame.tower_damage}}
                 </div>
             </div>
         </div>

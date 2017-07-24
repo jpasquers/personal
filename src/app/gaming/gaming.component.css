@@ -8,8 +8,12 @@
     margin-bottom: 40px;
 }
 
+.err {
+    text-align: center;
+}
+
  .game-container {
-    width: 400px;
+    width: 500px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 3px;
@@ -26,12 +30,13 @@
     width: 100%;
 }
 
-.info-container {
+.info-container, .info-container-2 {
     font-size: 18px;
     padding: 5px 20px 20px;
 }
 
-.info-item.hero {
+.hero-name {
+    padding: 5px 20px 20px;
     font-size: 20px;
     text-align: center;
     font-weight: bold;

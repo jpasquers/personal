@@ -14,7 +14,6 @@ export class GamingComponent implements OnInit {
   heroImageLoaded: boolean;
 
   constructor(private gamingService: GamingService) { 
-    this.mostRecentGame = {};
     this.gameLoaded = false;
     this.heroImageLoaded = false;
     this.heroImageURI = '';
