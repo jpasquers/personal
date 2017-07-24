@@ -7,8 +7,7 @@ import { ArtistsComponent } from './artists/artists.component';
 import { SongsComponent } from './songs/songs.component';
 
 
-
-const appRoutes: Routes = [{
+const musicRoutes: Routes = [{
     path: "music",
     component: MusicComponent,
     children: [{
@@ -28,7 +27,7 @@ const appRoutes: Routes = [{
 ]
 
 @NgModule({
-    imports: [RouterModule.forChild(appRoutes)],
+    imports: [RouterModule.forChild(musicRoutes)],
     exports: [RouterModule]
 })
 export class MusicRoutingModule { }

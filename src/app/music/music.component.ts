@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./music.component.css']
 })
 export class MusicComponent implements OnInit {
-  navItems: any
+  musicNavItems: any
 
   constructor() {
-    this.navItems = [{
+    this.musicNavItems = [{
       link: "/music/playing",
       text: "Currently Playing"
     }, {

@@ -7,6 +7,8 @@
 
 .vert-nav ul {
     list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .vert-nav ul li {
@@ -14,6 +16,7 @@
     border: 1px solid rgb(90,150,220);
     border-radius: 50px;
     margin-bottom: 15px;
+    transition: background-color 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .vert-nav ul li a {

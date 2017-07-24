@@ -6,23 +6,22 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { MusicModule } from './music/music.module';
+import { TrackModule } from './track/track.module';
+import { VertNavModule } from './vert-nav/vert-nav.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { TrackComponent } from './track/track.component';
 import { GamingComponent } from './gaming/gaming.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 
 import { GamingService } from './gaming/gaming.service';
 import { FeedbackService } from './feedback/feedback.service';
 import { RatingComponent } from './rating/rating.component';
-import { VertNavModule } from './vert-nav/vert-nav.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    TrackComponent,
     GamingComponent,
     FeedbackComponent,
     RatingComponent
@@ -31,8 +30,9 @@ import { VertNavModule } from './vert-nav/vert-nav.module';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule,
     MusicModule,
+    TrackModule,
+    AppRoutingModule,
     VertNavModule
   ],
   providers: [GamingService, FeedbackService],
