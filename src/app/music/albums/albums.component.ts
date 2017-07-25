@@ -28,7 +28,7 @@ import {
       state('clicked',style({
         transform: 'scale(3)'
       })),
-      transition('* => *', animate('100ms ease-in'))
+      transition('* => *', animate('800ms ease-in'))
     ])
   ]
 })
