@@ -20,15 +20,18 @@ import {
       })),
       state('visible', style({
         opacity: 1,
-        transform: 'scale(1)'
+        transform: 'scale(1)',
+        'z-index': 0
       })),
       state('hover', style({
         transform: 'scale(1.1)',
-        opacity: 1
+        opacity: 1,
+        'z-index': 1
       })),
       state('clicked',style({
         transform: 'scale(3)',
-        opacity: 1
+        opacity: 1,
+        'z-index': 2
       })),
       transition('* => *', animate('800ms ease-in'))
     ])
