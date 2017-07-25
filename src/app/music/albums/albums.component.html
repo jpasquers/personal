@@ -1,8 +1,8 @@
 <div class="imgs-container">
   <div *ngFor="let album of savedAlbums; let i = index;" class="img-container"
     [ngStyle]="{
-            'left': ((i % 5)*200) + 'px',
-            'top': (Math.floor(i / 5)*200) + 'px'
+            'left': ((i % 5)*150) + 'px',
+            'top': (Math.floor(i / 5)*150) + 'px'
           }">
     <img class="album-cover" [src]="album.album.images[0].url"/>
   </div>
