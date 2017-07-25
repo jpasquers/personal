@@ -98,11 +98,10 @@ export class AlbumsComponent implements OnInit {
   onImgClick(album) {
     if (album.state == "visible" || album.state=="hover") {
       album.state="clicked";
-      album.oldStyle = Object.assign({}, album.style);
-      album.style = {};
     }
     else if (album.state == "clicked") {
       album.state = "visible";
+      album.oldStyle = Object.assign({}, album.style);
       album.style = album.oldStyle;
     }
   }
