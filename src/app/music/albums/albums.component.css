@@ -5,13 +5,13 @@
 
 .albums-container {
     margin-top: 40px;
+    padding-left: 200px;
 }
 
 .imgs-container {
     width: 750px;
     margin: auto;
     position: relative;
-    padding-left: 200px;
     height: 500px;
 }
 
