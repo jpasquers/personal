@@ -3,7 +3,7 @@ import { RouterModule, Routes} from '@angular/router';
 
 import { MusicComponent } from './music.component';
 import { PlayingComponent } from './playing/playing.component';
-import { ArtistsComponent } from './artists/artists.component';
+import { AlbumsComponent } from './albums/albums.component';
 import { SongsComponent } from './songs/songs.component';
 
 
@@ -18,8 +18,8 @@ const musicRoutes: Routes = [{
         path: "playing",
         component: PlayingComponent
     },{
-        path: "artists",
-        component: ArtistsComponent
+        path: "albums",
+        component: AlbumsComponent
     }, {
         path: "songs",
         component: SongsComponent

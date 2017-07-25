@@ -9,16 +9,16 @@ import { VertNavModule } from '../vert-nav/vert-nav.module';
 
 import { MusicComponent } from './music.component';
 import { PlayingComponent } from './playing/playing.component';
-import { ArtistsComponent } from './artists/artists.component';
+import { AlbumsComponent } from './albums/albums.component';
 import { SongsComponent } from './songs/songs.component';
 
 import { PlayingService } from './playing/playing.service';
-import { ArtistsService } from './artists/artists.service';
+import { AlbumsService } from './albums/albums.service';
 
 @NgModule({
   declarations: [
     PlayingComponent,
-    ArtistsComponent,
+    AlbumsComponent,
     SongsComponent,
     MusicComponent],
   imports: [
@@ -28,6 +28,6 @@ import { ArtistsService } from './artists/artists.service';
     MusicRoutingModule,
     VertNavModule
   ],
-  providers: [PlayingService, ArtistsService]
+  providers: [PlayingService, AlbumsService]
 })
 export class MusicModule { }

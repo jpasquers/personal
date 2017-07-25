@@ -9,14 +9,14 @@ import 'rxjs/add/operator/catch';
 
 
 @Injectable()
-export class ArtistsService {
+export class AlbumsService {
 
     constructor(private http:Http) {
 
     }
 
-    getTopArtists(): Observable<any> {
-        return this.http.get("/topArtists")
+    getSavedAlbums(): Observable<any> {
+        return this.http.get("/savedAlbums")
             .map((res:Response) => res.json());
     }
 }

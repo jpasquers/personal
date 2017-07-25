@@ -13,8 +13,8 @@ export class MusicComponent implements OnInit {
       link: "/music/playing",
       text: "Currently Playing"
     }, {
-      link: "/music/artists",
-      text: "My Top Artists"
+      link: "/music/albums",
+      text: "My Saved Albums"
     },{
       link: "/music/songs",
       text: "My Top Songs"
