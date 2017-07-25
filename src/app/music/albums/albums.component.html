@@ -7,10 +7,7 @@
       *ngFor="let album of savedAlbums; let i = index;" 
       [@imgState]="album.state" 
       class="img-container"
-      [ngStyle]="{
-              'left': ((i % 5)*150) + 'px',
-              'top': (Math.floor(i / 5)*150) + 'px'
-            }">
+      [ngStyle]="album.style">
       <img (load)="imgLoaded()" class="album-cover" [src]="album.album.images[0].url"/>
     </div>
   </div>

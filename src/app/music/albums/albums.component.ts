@@ -35,7 +35,6 @@ import {
       state('clicked',style({
         transform: 'scale(3)',
         'transform-origin': '0 0',
-        position: 'absolute',
         top: '25px',
         left: '150px',
         opacity: 1,
@@ -63,8 +62,12 @@ export class AlbumsComponent implements OnInit {
   ngOnInit() {
     this.albumsService.getSavedAlbums().subscribe((albums) => {
       console.log(albums);
-      this.savedAlbums = albums.map((album) => {
+      this.savedAlbums = albums.map((album, i) => {
         album.state="hidden";
+        album.style= {
+          'left': ((i % 5)*150) + 'px',
+          'top': (Math.floor(i / 5)*150) + 'px'
+        }
         return album;
       });
     }, (err) => {
@@ -95,10 +98,12 @@ export class AlbumsComponent implements OnInit {
   onImgClick(album) {
     if (album.state == "visible" || album.state=="hover") {
       album.state="clicked";
+      album.oldStyle = Object.assign({}, album.style);
+      album.style = {};
     }
     else if (album.state == "clicked") {
       album.state = "visible";
-
+      album.style = album.oldStyle;
     }
   }
 
