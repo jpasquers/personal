@@ -104,8 +104,11 @@ export class AlbumsComponent implements OnInit {
     }
   }
 
-  animationStarted($event) {
-    console.log($event);
+  animationStarted($event, i) {
+    if ($event.fromState == "clicked" && $event.toState == "visible") {
+      $event.element.style.top = (Math.floor(i / 5)*150) + 'px';
+      $event.element.style.left = ((i % 5)*150) + 'px';
+    }
   }
 
 }
