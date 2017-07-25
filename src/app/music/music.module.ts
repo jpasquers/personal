@@ -21,14 +21,14 @@ import { AlbumsService } from './albums/albums.service';
     PlayingComponent,
     AlbumsComponent,
     SongsComponent,
-    MusicComponent],
+    MusicComponent,
+    NgStyle],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     MusicRoutingModule,
-    VertNavModule,
-    NgStyle
+    VertNavModule
   ],
   providers: [PlayingService, AlbumsService]
 })
