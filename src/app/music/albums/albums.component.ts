@@ -22,24 +22,27 @@ import {
         opacity: 1,
         transform: 'scale(1)',
         'z-index': 0,
-        'box-shadow': 'none'
+        'box-shadow': 'none',
+        'transform-origin': 'initial'
       })),
       state('hover', style({
         transform: 'scale(1.1)',
         opacity: 1,
         'z-index': 1,
-        'box-shadow': '0 0 6px 3px rgba(0,0,0,0.2)'
+        'box-shadow': '0 0 20px 10px rgba(0,0,0,0.4)',
+        'transform-origin': 'initial'
       })),
       state('clicked',style({
         transform: 'scale(3)',
+        'transform-origin': '0 0',
         opacity: 1,
         'z-index': 2,
-        'box-shadow': '0 0 6px 3px rgba(0,0,0,0.2)'
+        'box-shadow': '0 0 20px 10px rgba(0,0,0,0.4)'
       })),
       transition('hidden => visible', animate('800ms ease-in')),
       transition('visible => hover', animate('150ms ease-in')),
       transition('hover => visible', animate('0ms ease-out')),
-      transition('hover => clicked', animate('1000ms ease-in')),
+      transition('hover => clicked', animate('700ms ease-in')),
       transition('clicked => visible', animate('400ms ease-out'))
     ])
   ]
