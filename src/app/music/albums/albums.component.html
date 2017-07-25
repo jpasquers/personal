@@ -4,7 +4,8 @@
       (mouseleave)="onImgMouseLeave(album)"
       (mouseover)="onImgMouseOver(album)" 
       (click)="onImgClick(album)" 
-      *ngFor="let album of savedAlbums; let i = index;" 
+      *ngFor="let album of savedAlbums; let i = index;"
+      (@imgState.start)="animationStarted($event)" 
       [@imgState]="album.state" 
       class="img-container"
       [ngStyle]="album.style">
