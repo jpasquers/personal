@@ -35,6 +35,7 @@ import {
       state('clicked',style({
         transform: 'scale(3)',
         'transform-origin': '0 0',
+        position: 'absolute',
         top: '25px',
         left: '150px',
         opacity: 1,
@@ -97,6 +98,7 @@ export class AlbumsComponent implements OnInit {
     }
     else if (album.state == "clicked") {
       album.state = "visible";
+
     }
   }
 
