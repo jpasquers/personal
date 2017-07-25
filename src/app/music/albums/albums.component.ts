@@ -21,19 +21,26 @@ import {
       state('visible', style({
         opacity: 1,
         transform: 'scale(1)',
-        'z-index': 0
+        'z-index': 0,
+        'box-shadow': 'none'
       })),
       state('hover', style({
         transform: 'scale(1.1)',
         opacity: 1,
-        'z-index': 1
+        'z-index': 1,
+        'box-shadow': '0 0 6px 3px rgba(0,0,0,0.2)'
       })),
       state('clicked',style({
         transform: 'scale(3)',
         opacity: 1,
-        'z-index': 2
+        'z-index': 2,
+        'box-shadow': '0 0 6px 3px rgba(0,0,0,0.2)'
       })),
-      transition('* => *', animate('800ms ease-in'))
+      transition('hidden => visible', animate('800ms ease-in')),
+      transition('visible => hover', animate('150ms ease-in')),
+      transition('hover => visible', animate('0ms ease-out')),
+      transition('hover => clicked', animate('1000ms ease-in')),
+      transition('clicked => visible', animate('400ms ease-out'))
     ])
   ]
 })
@@ -80,7 +87,12 @@ export class AlbumsComponent implements OnInit {
   }
 
   onImgClick(album) {
-    if (album.state == "visible" || album.state=="hover") album.state="clicked";
+    if (album.state == "visible" || album.state=="hover") {
+      album.state="clicked";
+    }
+    else if (album.state == "clicked") {
+      album.state = "visible";
+    }
   }
 
 }
