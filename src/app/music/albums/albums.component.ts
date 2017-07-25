@@ -35,8 +35,8 @@ import {
       state('clicked',style({
         transform: 'scale(3)',
         'transform-origin': '0 0',
-        bottom: '25px',
-        right: '150px',
+        top: '25px',
+        left: '150px',
         opacity: 1,
         'z-index': 2,
         'box-shadow': '0 0 20px 10px rgba(0,0,0,0.4)'
