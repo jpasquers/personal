@@ -65,5 +65,13 @@ export class AlbumsComponent implements OnInit {
       this.savedAlbums[i].state = "visible"
     })
   }
+  
+  onImgHover(album) {
+    if (album.state == "visible") album.state="hover";
+  }
+
+  onImgClick(album) {
+    if (album.state == "visible" || album.state=="hover") album.state="clicked";
+  }
 
 }

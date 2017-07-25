@@ -1,6 +1,6 @@
 <div class="albums-container container-fluid">
   <div class="imgs-container">
-    <div *ngFor="let album of savedAlbums; let i = index;" [@imgState]="album.state" class="img-container"
+    <div on-mouseover="onImgHover(album)" (click)="onImgClick(album)" *ngFor="let album of savedAlbums; let i = index;" [@imgState]="album.state" class="img-container"
       [ngStyle]="{
               'left': ((i % 5)*150) + 'px',
               'top': (Math.floor(i / 5)*150) + 'px'
