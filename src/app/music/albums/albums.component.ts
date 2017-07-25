@@ -24,9 +24,11 @@ import {
       })),
       state('hover', style({
         transform: 'scale(1.1)',
+        opacity: 1
       })),
       state('clicked',style({
-        transform: 'scale(3)'
+        transform: 'scale(3)',
+        opacity: 1
       })),
       transition('* => *', animate('800ms ease-in'))
     ])
@@ -66,8 +68,12 @@ export class AlbumsComponent implements OnInit {
     })
   }
   
-  onImgHover(album) {
+  onImgMouseOver(album) {
     if (album.state == "visible") album.state="hover";
+  }
+
+  onImgMouseLeave(album) {
+    if (album.state == "hover") album.state="visible";
   }
 
   onImgClick(album) {
