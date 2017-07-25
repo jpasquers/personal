@@ -11,6 +11,7 @@ export class AlbumsComponent implements OnInit {
   Math: any;
   constructor(private albumsService: AlbumsService) {
     this.savedAlbums = [];
+    this.Math = Math;
    }
 
   ngOnInit() {
