@@ -102,7 +102,7 @@ export class AlbumsComponent implements OnInit {
     else if (album.state == "clicked") {
       album.state = "visible";
       album.oldStyle = Object.assign({}, album.style);
-      album.style = album.oldStyle;
+      setTimeout(album.style = album.oldStyle, 0);
     }
   }
 
