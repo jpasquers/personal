@@ -3,6 +3,10 @@
     height: 100%;
 }
 
+.albums-container {
+    margin-top: 40px;
+}
+
 .imgs-container {
     width: 750px;
     margin: auto;
