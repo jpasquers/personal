@@ -8,6 +8,7 @@ import {AlbumsService} from './albums.service';
 })
 export class AlbumsComponent implements OnInit {
   savedAlbums: any[];
+  Math: any;
   constructor(private albumsService: AlbumsService) {
     this.savedAlbums = [];
    }
