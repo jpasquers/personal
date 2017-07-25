@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgStyle } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
@@ -26,7 +27,8 @@ import { AlbumsService } from './albums/albums.service';
     FormsModule,
     HttpModule,
     MusicRoutingModule,
-    VertNavModule
+    VertNavModule,
+    NgStyle
   ],
   providers: [PlayingService, AlbumsService]
 })
