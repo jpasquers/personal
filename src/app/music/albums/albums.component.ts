@@ -53,10 +53,12 @@ export class AlbumsComponent implements OnInit {
   savedAlbums: any[];
   imgsLoaded: number;
   Math: any;
+  ptrEvents: String;
   constructor(private albumsService: AlbumsService) {
     this.savedAlbums = [];
     this.Math = Math;
     this.imgsLoaded = 0;
+    this.ptrEvents = "auto";
    }
 
   ngOnInit() {
