@@ -1,13 +1,12 @@
 <div class="albums-container container-fluid">
-  <div class="imgs-container"
-    [ngStyle]="{'pointer-events': ptrEvents}">
+  <div class="imgs-container">
     <div 
       (mouseleave)="onImgMouseLeave(album)"
       (mouseover)="onImgMouseOver(album)" 
       (click)="onImgClick(album)" 
       *ngFor="let album of savedAlbums; let i = index;"
-      (@imgState.start)="ptrEvents = 'none'"
-      (@imgState.done)="ptrEvents = 'auto'" 
+      (@imgState.start)="transitioning=true;"
+      (@imgState.done)="transitioning=false" 
       [@imgState]="album.state" 
       class="img-container"
       [ngStyle]="album.style">

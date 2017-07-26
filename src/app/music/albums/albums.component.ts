@@ -53,12 +53,12 @@ export class AlbumsComponent implements OnInit {
   savedAlbums: any[];
   imgsLoaded: number;
   Math: any;
-  ptrEvents: String;
+  transitioning: boolean;
   constructor(private albumsService: AlbumsService) {
     this.savedAlbums = [];
     this.Math = Math;
     this.imgsLoaded = 0;
-    this.ptrEvents = "auto";
+    this.transitioning = false;
    }
 
   ngOnInit() {
@@ -90,18 +90,18 @@ export class AlbumsComponent implements OnInit {
   }
   
   onImgMouseOver(album) {
-    if (album.state == "visible") album.state="hover";
+    if (album.state == "visible" && !this.transitioning) album.state="hover";
   }
 
   onImgMouseLeave(album) {
-    if (album.state == "hover") album.state="visible";
+    if (album.state == "hover" && !this.transitioning) album.state="visible";
   }
 
   onImgClick(album) {
-    if (album.state == "visible" || album.state=="hover") {
+    if ((album.state == "visible" || album.state=="hover") && !this.transitioning) {
       album.state="clicked";
     }
-    else if (album.state == "clicked") {
+    else if (album.state == "clicked" && !this.transitioning) {
       album.state = "visible";
     }
   }
