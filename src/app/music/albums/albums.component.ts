@@ -35,11 +35,11 @@ import {
       state('clicked',style({
         transform: 'scale(3)',
         'transform-origin': '0 0',
-        top: '25px',
+        top: '75px',
         left: '150px',
         opacity: 1,
         'z-index': 2,
-        'box-shadow': '0 0 20px 10px rgba(0,0,0,0.4)'
+        'box-shadow': '0 0 40px 20px rgba(0,0,0,0.6)'
       })),
       transition('hidden => visible', animate('800ms ease-in')),
       transition('visible => hover', animate('250ms ease-in')),
