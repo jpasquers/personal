@@ -45,7 +45,8 @@ import {
       transition('visible => hover', animate('250ms ease-in')),
       transition('hover => visible', animate('0ms ease-out')),
       transition('hover => clicked', animate('700ms ease-in')),
-      transition('clicked => visible', animate('400ms ease-out'))
+      transition('clicked => visible', animate('400ms ease-out')),
+      transition('visible => clicked', animate('700ms ease-in'))
     ])
   ]
 })
@@ -97,21 +98,21 @@ export class AlbumsComponent implements OnInit {
     if (album.state == "hover" && !this.albumClicked) album.state="visible";
   }
 
-  onImgClick(album) {
+  onImgClick(album,i) {
     if ((album.state == "visible" || album.state=="hover" && !this.albumClicked)) {
       this.albumClicked = true;
       album.state="clicked";
     }
     else if (album.state == "clicked") {
       album.state = "visible";
+      album.style= {
+        'left': ((i % 5)*150) + 'px',
+        'top': (Math.floor(i / 5)*150) + 'px'
+      }
     }
   }
 
   animationStarted($event, i) {
-    if ($event.fromState == "clicked" && $event.toState == "visible") {
-      $event.element.style.top = (Math.floor(i / 5)*150) + 'px';
-      $event.element.style.left = ((i % 5)*150) + 'px';
-    }
   }
 
   animationEnded($event, i) {

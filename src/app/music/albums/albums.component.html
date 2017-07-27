@@ -3,7 +3,7 @@
     <div 
       (mouseleave)="onImgMouseLeave(album)"
       (mouseover)="onImgMouseOver(album)" 
-      (click)="onImgClick(album)" 
+      (click)="onImgClick(album, i)" 
       *ngFor="let album of savedAlbums; let i = index;"
       (@imgState.start)="animationStarted($event, i)"
       (@imgState.done)="animationEnded($event, i)"
