@@ -99,6 +99,7 @@ export class AlbumsComponent implements OnInit {
 
   onImgClick(album) {
     if ((album.state == "visible" || album.state=="hover" && !this.albumClicked)) {
+      this.albumClicked = true;
       album.state="clicked";
     }
     else if (album.state == "clicked") {
@@ -116,9 +117,6 @@ export class AlbumsComponent implements OnInit {
   animationEnded($event, i) {
     if ($event.fromState == "clicked") {
       this.albumClicked = false;
-    }
-    else if ($event.toState == "clicked") {
-      this.albumClicked = true;
     }
   }
 
