@@ -21,14 +21,12 @@ import {
       state('visible', style({
         opacity: 1,
         transform: 'scale(1)',
-        'z-index': 0,
         'box-shadow': 'none',
         'transform-origin': 'initial'
       })),
       state('hover', style({
         transform: 'scale(1.1)',
         opacity: 1,
-        'z-index': 1,
         'box-shadow': '0 0 20px 10px rgba(0,0,0,0.4)',
         'transform-origin': 'initial'
       })),
@@ -88,11 +86,17 @@ export class AlbumsComponent implements OnInit {
   }
   
   onImgMouseOver(album) {
-    if (album.state == "visible" && !this.albumClicked) album.state="hover";
+    if (album.state == "visible" && !this.albumClicked) {
+      album.state="hover";
+      album.style["z-index"] = 1;
+    }
   }
 
   onImgMouseLeave(album) {
-    if (album.state == "hover" && !this.albumClicked) album.state="visible";
+    if (album.state == "hover" && !this.albumClicked) {
+      album.state="visible";
+      album.style["z-index"] = 0;
+    }
   }
 
   onImgClick(album,i) {
