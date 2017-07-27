@@ -111,9 +111,12 @@ export class AlbumsComponent implements OnInit {
     }
     else if (album.state == "clicked") {
       album.state = "visible";
+      //We actually keep the z-index at 2 until the animation ends.
+      //That way it still appears 'above' the other elements as it moves back
       album.style= {
         'left': ((i % 5)*150) + 'px',
-        'top': (Math.floor(i / 5)*150) + 'px'
+        'top': (Math.floor(i / 5)*150) + 'px',
+        'z-index': 2
       }
     }
   }
