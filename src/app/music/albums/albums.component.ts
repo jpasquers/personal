@@ -62,6 +62,7 @@ export class AlbumsComponent implements OnInit {
       console.log(albums);
       this.savedAlbums = albums.map((album, i) => {
         album.state="hidden";
+        album.statsVisible= false;
         album.style= {
           'left': ((i % 5)*150) + 'px',
           'top': (Math.floor(i / 5)*150) + 'px'
@@ -111,6 +112,7 @@ export class AlbumsComponent implements OnInit {
     }
     else if (album.state == "clicked") {
       album.state = "visible";
+      album.statsVisible = false;
       //We actually keep the z-index at 2 until the animation ends.
       //That way it still appears 'above' the other elements as it moves back
       album.style= {
@@ -128,6 +130,9 @@ export class AlbumsComponent implements OnInit {
     if ($event.fromState == "clicked") {
       this.albumClicked = false;
       this.savedAlbums[i].style["z-index"] = 0;
+    }
+    else if ($event.toState == "clicked") {
+      this.savedAlbums[i].statsVisible = true;
     }
   }
 
