@@ -21,5 +21,5 @@
     height: 150px;
     opacity: 0;
     cursor: pointer;
-    transition: transform-origin 10s ease-in, top 10s ease-in, left 10s ease-in;
+    transition: top 0.7s ease-in, left 0.7s ease-in;
 }
