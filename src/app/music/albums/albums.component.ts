@@ -36,7 +36,6 @@ import {
         transform: 'scale(3)',
         'transform-origin': '0 0',
         opacity: 1,
-        'z-index': 2,
         'box-shadow': '0 0 40px 20px rgba(0,0,0,0.6)'
       })),
       transition('hidden => visible', animate('800ms ease-in')),
@@ -101,7 +100,8 @@ export class AlbumsComponent implements OnInit {
       this.albumClicked = true;
       album.style = {
         'left': '150px',
-        'top': '75px'
+        'top': '75px',
+        'z-index': 2
       }
       album.state="clicked";
     }
@@ -109,7 +109,8 @@ export class AlbumsComponent implements OnInit {
       album.state = "visible";
       album.style= {
         'left': ((i % 5)*150) + 'px',
-        'top': (Math.floor(i / 5)*150) + 'px'
+        'top': (Math.floor(i / 5)*150) + 'px',
+        'z-index': 0
       }
     }
   }
