@@ -43,7 +43,7 @@ import {
       transition('visible => hover', animate('250ms ease-in')),
       transition('hover => visible', animate('0ms ease-out')),
       transition('hover => clicked', animate('700ms ease-in')),
-      transition('clicked => visible', animate('400ms ease-out')),
+      transition('clicked => visible', animate('700ms ease-out')),
       transition('visible => clicked', animate('700ms ease-in'))
     ])
   ]
