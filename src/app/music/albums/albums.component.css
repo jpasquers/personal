@@ -19,7 +19,7 @@
     position: absolute;
     bottom: 10px;
     left: 10px;
-    transform-origin: 0 0;
+    transform-origin: left bottom;
     list-style-type: none;
     margin-left: 0;
     margin-bottom: 0;
