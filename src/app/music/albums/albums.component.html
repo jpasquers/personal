@@ -12,7 +12,7 @@
       [ngStyle]="album.style">
       <img (load)="imgLoaded()" class="album-cover" [src]="album.album.images[0].url"/>
 
-      <ul class="stats" ng-if="album.statsVisible">
+      <ul class="stats" *ngIf="album.statsVisible">
         <li> Name: {{album.album.name}}</li>
         <li> By: {{album.album.artists[0].name}} </li>
         <li> Released: {{album.album.release_date}} </li>
