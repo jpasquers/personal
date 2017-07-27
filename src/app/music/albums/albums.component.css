@@ -17,8 +17,8 @@
 
 .stats {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    bottom: -20px;
+    left: -60px;
     list-style-type: none;
     margin-left: 0;
     margin-bottom: 0;
