@@ -113,8 +113,7 @@ export class AlbumsComponent implements OnInit {
       album.state = "visible";
       album.style= {
         'left': ((i % 5)*150) + 'px',
-        'top': (Math.floor(i / 5)*150) + 'px',
-        'z-index': 0
+        'top': (Math.floor(i / 5)*150) + 'px'
       }
     }
   }
@@ -125,6 +124,7 @@ export class AlbumsComponent implements OnInit {
   animationEnded($event, i) {
     if ($event.fromState == "clicked") {
       this.albumClicked = false;
+      this.savedAlbums[i].style["z-index"] = 0;
     }
   }
 
