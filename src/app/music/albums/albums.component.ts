@@ -35,8 +35,6 @@ import {
       state('clicked',style({
         transform: 'scale(3)',
         'transform-origin': '0 0',
-        top: '75px',
-        left: '150px',
         opacity: 1,
         'z-index': 2,
         'box-shadow': '0 0 40px 20px rgba(0,0,0,0.6)'
@@ -99,8 +97,12 @@ export class AlbumsComponent implements OnInit {
   }
 
   onImgClick(album,i) {
-    if ((album.state == "visible" || album.state=="hover" && !this.albumClicked)) {
+    if ((album.state == "visible" || album.state=="hover") && !this.albumClicked) {
       this.albumClicked = true;
+      album.style = {
+        'left': '150px',
+        'top': '75px'
+      }
       album.state="clicked";
     }
     else if (album.state == "clicked") {
