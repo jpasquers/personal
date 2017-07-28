@@ -1,0 +1,22 @@
+<div class="albums-container container-fluid">
+  <div class="imgs-container">
+    <div 
+      (mouseleave)="onImgMouseLeave(album)"
+      (mouseover)="onImgMouseOver(album)" 
+      (click)="onImgClick(album, i)" 
+      *ngFor="let album of savedAlbums; let i = index;"
+      (@imgState.start)="animationStarted($event, i)"
+      (@imgState.done)="animationEnded($event, i)"
+      [@imgState]="album.state" 
+      class="img-container"
+      [ngStyle]="album.style">
+      <img (load)="imgLoaded()" class="album-cover" [src]="album.album.images[0].url"/>
+
+      <ul class="stats" *ngIf="album.statsVisible">
+        <li> Name: {{album.album.name}}</li>
+        <li> By: {{album.album.artists[0].name}} </li>
+        <li> Released: {{album.album.release_date}} </li>
+      </ul>
+    </div>
+  </div>
+</div>

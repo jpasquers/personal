@@ -1,0 +1,41 @@
+.album-cover {
+    width: 100%;
+    height: 100%;
+}
+
+.albums-container {
+    margin-top: 40px;
+    padding-left: 200px;
+}
+
+.imgs-container {
+    width: 750px;
+    margin: auto;
+    position: relative;
+    height: 800px;
+}
+
+.stats {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    transform-origin: left bottom;
+    list-style-type: none;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    width: calc(300% - 60px);
+    transform: scale(0.333333);
+    font-size: 14px;
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.img-container {
+    width: 150px;
+    position: absolute;
+    height: 150px;
+    opacity: 0;
+    cursor: pointer;
+    transition: top 0.7s ease-in, left 0.7s ease-in;
+}

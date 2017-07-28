@@ -58,16 +58,19 @@ module.exports = {
         });
     },
 
-    getTopArtists: (req, res) => {
+    getAlbums: (req, res) => {
         getToken((access_token) => {
             var options = {
-                url: 'https://api.spotify.com/v1/me/top/artists',
+                url: 'https://api.spotify.com/v1/me/albums',
                 headers: { 'Authorization': 'Bearer ' + access_token },
                 json: true
             };
             request.get(options, function(error, response, body) {
-                var artists = body.items;
-                res.send(artists);
+                console.log(error);
+		console.log(response.statusCode);
+		console.log(body);
+		var albums = body.items;
+                res.send(albums);
             });
 
         }, (err) => {
