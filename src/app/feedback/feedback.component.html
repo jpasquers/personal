@@ -1,24 +1,29 @@
 <div class="container-fluid">
-  <div class="row feedback-submit-container">
-    <h1>Submit Feedback</h1>
-    <form #reviewForm="ngForm" (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label for="name">Your Name: </label>
-        <input [(ngModel)]="model.name" class="form-control" type="text" id="name" name="name" required>
+  <div class="feedback-container">
+    <div class="row feedback-submit-container">
+      <h1>Submit Feedback</h1>
+      <form #reviewForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="name">Your Name: </label>
+          <input [(ngModel)]="model.name" class="form-control" type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="comment"> Your Comment: </label>
+          <textarea [(ngModel)]="model.comment" class="form-control" id="comment" name="comment" required></textarea>
+        </div>
+        <app-rating [fixed]="false" initial="0" (onRatingUpdate)="onRatingUpdate($event)"></app-rating>
+        <button type="submit" class="btn" [disabled]="!reviewForm.form.valid || !rating">Submit</button>
+      </form>
+    </div>
+    <hr>
+    <div class="row feedback-list-container">
+      <div *ngFor="let review of reviews" class="review-container col-md-12">
+        <div class="review">
+          <p><span>Name: </span> {{review.name}}</p>
+          <p><span>Comment: </span> {{review.comment}}</p>
+          <app-rating [fixed]="true" [initial]="review.rating"></app-rating>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="comment"> Your Comment: </label>
-        <textarea [(ngModel)]="model.comment" class="form-control" id="comment" name="comment" required></textarea>
-      </div>
-      <app-rating [fixed]="false" initial="0" (onRatingUpdate)="onRatingUpdate($event)"></app-rating>
-      <button type="submit" class="btn" [disabled]="!reviewForm.form.valid || !rating">Submit</button>
-    </form>
-  </div>
-  <div class="row feedback-list-container">
-    <div *ngFor="let review of reviews" class="review col-md-4 col-sm-6 col-xs-12">
-      <p><span>Name: </span> {{review.name}}</p>
-      <p><span>Comment: </span> {{review.comment}}</p>
-      <app-rating [fixed]="true" [initial]="review.rating"></app-rating>
     </div>
   </div>
 </div>

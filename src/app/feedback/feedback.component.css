@@ -1,4 +1,4 @@
-.feedback-submit-container {
+.feedback-container {
     width: 100%;
     max-width: 500px;
     margin-left: auto;
@@ -8,10 +8,17 @@
     display: inline-block;
 }
 
-.feedback-list-container {
+.feedback-list-container, .feedback-submit-container {
     margin-top: 20px;	
 }
 
-.review {
-    border-right: 1px solid rgb(50,50,50);
+.review-container {
+    padding: 15px;
+}
+
+.review {   
+    background: rgb(110,110,110);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
 }
