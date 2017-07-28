@@ -8,7 +8,7 @@
 .vert-nav ul {
     list-style-type: none;
     margin-left: 0;
-    padding-left: 0;
+    padding: 0 20px;
 }
 
 .vert-nav ul li {
@@ -37,4 +37,5 @@
 .vert-nav ul li a:focus,
 .vert-nav ul li a:hover {
     text-decoration: none;
+    outline: none;
 }

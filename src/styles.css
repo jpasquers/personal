@@ -3,3 +3,8 @@ body {
     font-family: 'Segoe UI', 'Lucida Grande','Ubuntu','sans-serif';
 }
 
+
+.spinner {
+    background-image: url("assets/dota-2.jpg");
+    background-position: center;
+}

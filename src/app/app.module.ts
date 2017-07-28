@@ -17,6 +17,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { GamingService } from './gaming/gaming.service';
 import { FeedbackService } from './feedback/feedback.service';
 import { RatingComponent } from './rating/rating.component';
+import { MyLoaderDirective } from './my-loader.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RatingComponent } from './rating/rating.component';
     HomeComponent,
     GamingComponent,
     FeedbackComponent,
-    RatingComponent
+    RatingComponent,
+    MyLoaderDirective
   ],
   imports: [
     BrowserModule,
