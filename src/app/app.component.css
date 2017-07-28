@@ -19,23 +19,89 @@
 .mynav li {
     float: left;
     color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .mynav li a {
-    padding: 15px 20px;
+    padding: 5px 20px;
     color: white;
     display: block;
+}
+
+
+.mynav li:first-child div {
+    border-left: 0px solid transparent;
+}
+
+.mynav li.active, .mynav li.active a {
+    background: white;
+}
+
+.mynav li.active a,  .mynav li.active:hover a {
+    color: rgb(0, 87, 145);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.mynav li.active div {
+    border-left: 0px solid transparent;
+}
+
+.mynav li.active + li div {
+    border-left: 0px solid transparent;  
+}
+
+.mynav li:focus, .mynav li a:focus {
+    outline: none;
+}
+
+.mynav li#homeLink.active, .mynav li#homeLink.active a {
+    background: rgb(210,210,210);
 }
 
 .mynav li:hover {
     cursor: pointer;
 }
 
-.mynav li:hover a, .mynav li a.active {
-    color: rgb(90,150,220);
+.mynav li:hover a {
+    /*color: rgb(90,150,220);*/
     text-decoration: none;
 }
 
 .mynav li:focus a, .mynav li a:focus {
     text-decoration: none;
+}
+
+
+
+/* style to allow transition of blue on hover*/
+
+.mynav li a {
+    background: black;
+}
+
+.mynav li > div {
+    background: linear-gradient(to right, rgb(0, 87, 145) 0%, rgb(0, 87, 145) 50%, white 50%, white 100%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    transition: background-position 0.5s linear;
+    border-left: 1px solid white;
+}
+
+.mynav li:hover > div {
+    background-position: 0 0;
+}
+
+.mynav li.active > div, .mynav li.active:hover > div {
+    background: none;
+}
+
+.mynav li.active:hover > div > a {
+    mix-blend-mode: initial;
+}
+
+.mynav li:hover > div > a {
+    mix-blend-mode: multiply;
 }
